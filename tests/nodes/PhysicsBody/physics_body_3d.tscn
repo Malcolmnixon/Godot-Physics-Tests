@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cplr40c1sl0b5"]
+[gd_scene load_steps=9 format=3 uid="uid://cplr40c1sl0b5"]
 
+[ext_resource type="PackedScene" uid="uid://c2re4jbewssk3" path="res://tests/nodes/PhysicsBody/tests/move_and_collide_3d/collide_sphere_concave.tscn" id="1_b5lvr"]
 [ext_resource type="PackedScene" uid="uid://dxosfcvftax0d" path="res://tests/nodes/PhysicsBody/tests/move_and_collide_3d/collide_sphere_sphere.tscn" id="1_qsgnv"]
 [ext_resource type="PackedScene" uid="uid://mnqtchryrkij" path="res://tests/nodes/PhysicsBody/tests/move_and_collide_3d/collide_sphere_cylinder.tscn" id="2_0pbta"]
+[ext_resource type="PackedScene" uid="uid://x2dusyvoapi2" path="res://tests/nodes/PhysicsBody/tests/move_and_collide_3d/collide_sphere_box.tscn" id="2_oqcou"]
 [ext_resource type="PackedScene" uid="uid://bwgl5ivfqijki" path="res://tests/nodes/PhysicsBody/tests/move_and_collide_3d/collide_sphere_capsule.tscn" id="3_5xjmy"]
+[ext_resource type="PackedScene" uid="uid://brmej3xy0dugq" path="res://tests/nodes/PhysicsBody/tests/move_and_collide_3d/collide_sphere_convex.tscn" id="3_my524"]
+[ext_resource type="PackedScene" uid="uid://bbwfn3foyd7et" path="res://tests/nodes/PhysicsBody/tests/move_and_collide_3d/collide_sphere_boundary.tscn" id="3_q0n00"]
 
 [sub_resource type="GDScript" id="GDScript_13ds0"]
 script/source = "extends TestScene
@@ -13,6 +17,14 @@ script = SubResource("GDScript_13ds0")
 
 [node name="collide_sphere_sphere" parent="." instance=ExtResource("1_qsgnv")]
 
+[node name="collide_sphere_capsule" parent="." instance=ExtResource("3_5xjmy")]
+
 [node name="collide_sphere_cylinder" parent="." instance=ExtResource("2_0pbta")]
 
-[node name="collide_sphere_capsule" parent="." instance=ExtResource("3_5xjmy")]
+[node name="collide_sphere_box" parent="." instance=ExtResource("2_oqcou")]
+
+[node name="collide_sphere_concave" parent="." instance=ExtResource("1_b5lvr")]
+
+[node name="collide_sphere_convex" parent="." instance=ExtResource("3_my524")]
+
+[node name="collide_sphere_boundary" parent="." instance=ExtResource("3_q0n00")]
